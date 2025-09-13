@@ -95,7 +95,7 @@ const products = [
         img: One,
         extraImgs: [One, OneO, OneTwo],
         price: "₹ 20.00",
-        desc: "Aqua Wow Packaged Drinking Water - 1L Round Bottle. Available in 3 premium variants.",
+        desc: "Aqua Wow Packaged Drinking Water - 1L Round Bottle.",
       },
     ],
   },
