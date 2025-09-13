@@ -37,26 +37,26 @@ const products = [
     tab: "All",
     items: [
       {
-        name: "ROUND BOTTLE 250ml",
+        name: "Aqua Wow 250ml",
         img: img,
         price: "₹ 15.00",
-        desc: "Aqua Wow Packaged Drinking Water - 250ml Round Bottle. Pure, portable hydration for on-the-go.",
+        desc: "Aqua Wow Packaged Drinking Water - 200ml Round Bottle. Pure, portable hydration for on-the-go.",
       },
       {
-        name: "ROUND BOTTLE 500ml",
+        name: "Aqua Wow 500ml",
         img: Five,
         price: "₹ 10.00",
         desc: "Aqua Wow Packaged Drinking Water - 500ml Round Bottle. Perfect balance for everyday refreshment.",
       },
       {
-        name: "ROUND BOTTLE 1L ",
+        name: "Aqua Wow 1L ",
         img: One,
         extraImgs: [One, OneO], // ✅ Multiple images for hover effect
         price: "₹ 20.00",
         desc: "Aqua Wow Packaged Drinking Water - 1L Round Bottle. Available in 3 premium variants.",
       },
       {
-        name: "ROUND BOTTLE 2L",
+        name: "Aqua Wow 2L",
         img: img,
         price: "₹ 45.00",
         desc: "Aqua Wow Packaged Drinking Water - 2L Round Bottle. Ideal for families and gatherings.",
@@ -64,22 +64,22 @@ const products = [
     ],
   },
   {
-    tab: "ROUND BOTTLE 250ml",
+    tab: "Aqua Wow 200ml",
     items: [
       {
-        name: "ROUND BOTTLE 250ml",
+        name: "Aqua Wow 250ml",
         img: img,
         price: "₹ 15.00",
-        desc: "Aqua Wow Packaged Drinking Water - 250ml Round Bottle. Pure, portable hydration for on-the-go.",
+        desc: "Aqua Wow Packaged Drinking Water - 200ml Round Bottle. Pure, portable hydration for on-the-go.",
         badge: "Best Seller",
       },
     ],
   },
   {
-    tab: "ROUND BOTTLE 500ml",
+    tab: "Aqua Wow 500ml",
     items: [
       {
-        name: "ROUND BOTTLE 500ml",
+        name: "Aqua Wow 500ml",
         img: Five,
         price: "₹ 10.00",
         desc: "Aqua Wow Packaged Drinking Water - 500ml Round Bottle. Perfect balance for everyday refreshment.",
@@ -88,10 +88,10 @@ const products = [
     ],
   },
   {
-    tab: "ROUND BOTTLE 1L",
+    tab: "Aqua Wow 1L",
     items: [
       {
-        name: "ROUND BOTTLE 1L ",
+        name: "Aqua Wow 1L ",
         img: One,
         extraImgs: [One, OneO, OneTwo],
         price: "₹ 20.00",
@@ -100,10 +100,10 @@ const products = [
     ],
   },
   {
-    tab: "ROUND BOTTLE 2L",
+    tab: "Aqua Wow 2L",
     items: [
       {
-        name: "ROUND BOTTLE 2L",
+        name: "Aqua Wow 2L",
         img: img,
         price: "₹ 45.00",
         desc: "Aqua Wow Packaged Drinking Water - 2L Round Bottle. Ideal for families and gatherings.",
@@ -116,10 +116,10 @@ const products = [
 // ✅ Tabs
 const tabNames = [
   "All",
-  "ROUND BOTTLE 250ml",
-  "ROUND BOTTLE 500ml",
-  "ROUND BOTTLE 1L",
-  "ROUND BOTTLE 2L",
+  "Aqua Wow 250ml",
+  "Aqua Wow 500ml",
+  "Aqua Wow 1L",
+  "Aqua Wow 2L",
 ];
 
 const phoneNumber = "919369535853";
@@ -157,7 +157,7 @@ const AquaWowopioProducts = () => {
             textShadow: "1px 3px 7px #b2ebf2",
           }}
         >
-          Aqua Wowopio
+          Aqua Wowo
         </h1>
         <p
           className="text-[#1979ab] text-xl font-semibold mb-8"
