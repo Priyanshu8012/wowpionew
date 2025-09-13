@@ -93,7 +93,7 @@ const products = [
       {
         name: "Aqua Wow 1L ",
         img: One,
-        extraImgs: [One, OneO, OneTwo],
+        extraImgs: [One, OneO],
         price: "₹ 20.00",
         desc: "Aqua Wow Packaged Drinking Water - 1L Round Bottle.",
       },
@@ -116,7 +116,7 @@ const products = [
 // ✅ Tabs
 const tabNames = [
   "All",
-  "Aqua Wow 250ml",
+  "Aqua Wow 200ml",
   "Aqua Wow 500ml",
   "Aqua Wow 1L",
   "Aqua Wow 2L",
