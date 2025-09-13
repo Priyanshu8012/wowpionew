@@ -157,7 +157,7 @@ const AquaWowopioProducts = () => {
             textShadow: "1px 3px 7px #b2ebf2",
           }}
         >
-          Aqua Wowo
+          Aqua Wow
         </h1>
         <p
           className="text-[#1979ab] text-xl font-semibold mb-8"
