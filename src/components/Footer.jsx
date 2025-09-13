@@ -29,23 +29,32 @@ const Footer = () => (
       </div>
 
       {/* Quick Links */}
-      <div className="flex flex-col items-center md:items-start">
-        <h3 className="font-semibold mb-4 text-lg text-teal-300 uppercase tracking-wide">
-          Quick Links
-        </h3>
-        <ul className="space-y-2 text-gray-300 text-base">
-          {["Home", "About", "Services", "Gallery", "Contact"].map((item) => (
-            <li key={item}>
-              <a
-                href={`/${item.toLowerCase()}`}
-                className="hover:text-teal-200 hover:translate-x-1 inline-block transition-all duration-300"
-              >
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+     {/* Quick Links */}
+<div className="flex flex-col items-center md:items-start">
+  <h3 className="font-semibold mb-4 text-lg text-teal-300 uppercase tracking-wide">
+    Quick Links
+  </h3>
+  <ul className="space-y-2 text-gray-300 text-base">
+    {[
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Our Products", path: "/our-products" },
+      { name: "Services", path: "/services" },
+      { name: "Gallery", path: "/gallery" },
+      { name: "Contact", path: "/contact" },
+    ].map((link) => (
+      <li key={link.name}>
+        <a
+          href={link.path}
+          className="hover:text-teal-200 hover:translate-x-1 inline-block transition-all duration-300"
+        >
+          {link.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
       {/* Contact Info */}
       <div className="flex flex-col items-center md:items-start">

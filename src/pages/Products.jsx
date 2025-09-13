@@ -51,7 +51,7 @@ const products = [
       {
         name: "Aqua Wow 1L ",
         img: One,
-        extraImgs: [One, OneO], // ✅ Multiple images for hover effect
+        extraImgs: [One, OneO],
         price: "₹ 20.00",
         desc: "Aqua Wow Packaged Drinking Water - 1L Round Bottle. Available in 3 premium variants.",
       },
@@ -199,7 +199,7 @@ const AquaWowopioProducts = () => {
             key={i}
             className="relative bg-white rounded-3xl shadow-lg p-7 flex flex-col items-center transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2"
             style={{
-              minHeight: "430px",
+              minHeight: "500px",
               border: "2px solid #e0fdff",
               boxShadow: "0 10px 40px #13bdb72c",
             }}
@@ -223,8 +223,8 @@ const AquaWowopioProducts = () => {
               <BottleIcon size={42} />
             </span>
 
-            {/* Product Image with Hover Effect for 1L */}
-            <div className="w-36 h-36 rounded-xl overflow-hidden shadow mb-4 bg-[#e3f0fa] flex items-center justify-center relative border-2 border-[#b4e1fa]">
+            {/* Product Image (Full Size, No Blue sides) */}
+            <div className="w-full h-72 rounded-xl overflow-hidden shadow mb-6 flex items-center justify-center relative">
               {product.extraImgs ? (
                 <div className="relative w-full h-full group">
                   {product.extraImgs.map((imgSrc, idx) => (
@@ -244,12 +244,8 @@ const AquaWowopioProducts = () => {
                 <img
                   src={product.img}
                   alt={product.name}
-                  className="object-cover w-full h-full transition-all duration-500 hover:scale-110"
+                  className="object-cover w-full h-full transition-all duration-500 hover:scale-105"
                   loading="lazy"
-                  style={{
-                    borderRadius: 12,
-                    filter: "drop-shadow(0 2px 8px #e0f7fa)",
-                  }}
                 />
               )}
             </div>
