@@ -13,6 +13,10 @@ import {
 } from "react-icons/fa";
 
 import img1 from "../assets/gallery/Aboout.png";
+import ISIbg from "../assets/award/ISIbg.png";
+import fassaibg from "../assets/award/fassaibg.png";
+import HACCPbg from "../assets/award/HACCPbg.png";
+import boisbg from "../assets/award/boisbg.png";
 
 // ✅ Animated Counter Hook
 function useCountUp(target, duration = 2000) {
@@ -25,11 +29,8 @@ function useCountUp(target, duration = 2000) {
       if (!start.current) start.current = timestamp;
       const progress = Math.min((timestamp - start.current) / duration, 1);
       setCount(Math.floor(progress * target));
-      if (progress < 1) {
-        raf = requestAnimationFrame(step);
-      } else {
-        setCount(target);
-      }
+      if (progress < 1) raf = requestAnimationFrame(step);
+      else setCount(target);
     }
     raf = requestAnimationFrame(step);
     return () => {
@@ -47,7 +48,6 @@ const About = () => {
   const corporatePartners = useCountUp(100, 1800);
   const [rating, setRating] = useState(0);
 
-  // ✅ Fix rating animation
   useEffect(() => {
     let raf;
     function animateRating() {
@@ -82,6 +82,8 @@ const About = () => {
         </p>
       </section>
 
+     
+
       {/* ✅ Story Section */}
       <section className="max-w-5xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-12 items-center">
         <div>
@@ -89,13 +91,10 @@ const About = () => {
           <p className="text-cyan-800 mb-4 leading-relaxed">
             Founded by a passionate team of health, technology, and
             sustainability enthusiasts, WOWPIO began with a simple yet ambitious
-            vision:{" "}
-            <span className="font-semibold text-cyan-600">
+            vision: <span className="font-semibold text-cyan-600">
               to set a new standard for water quality in India
-            </span>
-            .
-            <br />
-            <br />
+            </span>.
+            <br /><br />
             From humble beginnings, delivering our first bottles on bicycles, we
             have grown into a trusted name, serving thousands of happy customers
             and partnering with leading organizations, schools, and hospitals.
@@ -117,6 +116,49 @@ const About = () => {
           />
           <div className="text-cyan-700 text-center text-sm italic">
             Our state-of-the-art purification plant in action.
+          </div>
+        </div>
+      </section>
+       {/* ✅ Awards Section */}
+      <section className="max-w-6xl mx-auto px-4 py-14">
+        <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-8 text-center">
+          Our Awards & Recognitions
+        </h2>
+        <div className="grid md:grid-cols-4 gap-8 text-center">
+          {/* ISI Award */}
+          <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all flex flex-col items-center">
+            <img src={ISIbg} alt="ISI Award" className="w-20 h-20 object-contain mb-3" />
+            <h3 className="font-bold text-blue-900">ISI Certification</h3>
+            <p className="text-cyan-800 text-sm mt-1">
+              Recognized for quality and safety standards.
+            </p>
+          </div>
+
+          {/* FASSI Award */}
+          <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all flex flex-col items-center">
+            <img src={fassaibg} alt="FASSI Award" className="w-20 h-20 object-contain mb-3" />
+            <h3 className="font-bold text-blue-900">FASSI Award</h3>
+            <p className="text-cyan-800 text-sm mt-1">
+              Excellence in sustainable water solutions.
+            </p>
+          </div>
+
+          {/* HACCP Award */}
+          <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all flex flex-col items-center">
+            <img src={HACCPbg} alt="HACCP Award" className="w-20 h-20 object-contain mb-3" />
+            <h3 className="font-bold text-blue-900">HACCP Certification</h3>
+            <p className="text-cyan-800 text-sm mt-1">
+              Ensuring the highest hygiene and food safety standards.
+            </p>
+          </div>
+
+          {/* BOIS Award */}
+          <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all flex flex-col items-center">
+            <img src={boisbg} alt="BOIS Award" className="w-20 h-20 object-contain mb-3" />
+            <h3 className="font-bold text-blue-900">BOIS Recognition</h3>
+            <p className="text-cyan-800 text-sm mt-1">
+              Honored for innovation and sustainability initiatives.
+            </p>
           </div>
         </div>
       </section>

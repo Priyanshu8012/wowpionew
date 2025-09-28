@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import HeroSection from "./Banner";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Award from "./Award";
+import Homepic from "../assets/pic.jpg"
 
 const features = [
   {
@@ -112,7 +114,8 @@ const Home = () => {
           </motion.div>
         ))}
       </section>
-
+ {/* Awared */}
+ <Award/>
       {/* Testimonials Slider */}
       <section className="bg-gradient-to-r from-cyan-50 to-teal-50 py-16">
         <div className="max-w-5xl mx-auto px-4">
