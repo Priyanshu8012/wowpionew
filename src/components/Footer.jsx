@@ -94,9 +94,9 @@ const Footer = () => (
         </h3>
         <div className="flex gap-4">
           {[
-            { href: "https://facebook.com", icon: <FaFacebookF />, label: "Facebook" },
-            { href: "https://instagram.com", icon: <FaInstagram />, label: "Instagram" },
-            { href: "https://twitter.com", icon: <FaTwitter />, label: "Twitter" },
+            { href: "https://www.facebook.com/profile.php?id=61580225862056", icon: <FaFacebookF />, label: "Facebook" },
+            { href: "https://www.instagram.com/aquawow/", icon: <FaInstagram />, label: "Instagram" },
+          //  { href: "https://twitter.com", icon: <FaTwitter />, label: "Twitter" },
             { href: "https://wa.me/+919369535853", icon: <FaWhatsapp />, label: "WhatsApp" },
           ].map((social, i) => (
             <a
