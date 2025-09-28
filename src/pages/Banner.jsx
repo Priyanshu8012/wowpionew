@@ -30,15 +30,32 @@ const HeroSection = () => {
   const [fadeKey, setFadeKey] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+  // Detect screen resize
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Trigger fade animation
   useEffect(() => {
     setFadeKey((prev) => prev + 1);
   }, [activeTab, isMobile]);
+
+  // ✅ Auto slider for mobile
+  useEffect(() => {
+    if (!isMobile) return; // Only run in mobile view
+    const tabs = Object.keys(tabContent);
+    const interval = setInterval(() => {
+      setActiveTab((prev) => {
+        const currentIndex = tabs.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % tabs.length;
+        return tabs[nextIndex];
+      });
+    }, 4000); // Change tab every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [isMobile]);
 
   return (
     <section className="w-full h-screen relative overflow-hidden">
