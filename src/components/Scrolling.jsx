@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
+import ChatbotToggle from "./ChatbotToggle";
 
 const FloatingActions = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -30,17 +31,18 @@ const FloatingActions = () => {
 
   return (
     <div className="fixed bottom-6 right-6 flex flex-col items-center gap-5 z-50">
-      {/* Scroll To Top Button */}
+      
+      {/* ✅ Scroll To Top Button (sabse upar) */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}
           className="relative flex items-center justify-center w-14 h-14 rounded-full 
                      bg-gradient-to-br from-teal-400 to-teal-600 text-white shadow-lg 
-                     hover:scale-110 transition-all duration-500 animate-fadeInUp"
+                     hover:scale-110 transition-all duration-500"
         >
           <FaArrowUp className="text-xl" />
 
-          {/* Circular progress ring */}
+          {/* Progress Ring */}
           <svg className="absolute inset-0 w-full h-full transform -rotate-90">
             <circle
               cx="28"
@@ -69,17 +71,24 @@ const FloatingActions = () => {
         </button>
       )}
 
-      {/* WhatsApp Floating Button */}
+           {/* ✅ WhatsApp Floating Button (sabse niche) */}
       <a
         href="https://wa.me/919369535853"
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-16 h-16 rounded-full 
+        className="flex items-center justify-center w-16 h-16 rounded-full 
                    bg-green-500 text-white shadow-xl hover:scale-110 
                    transition-transform duration-500 animate-pulse"
       >
         <FaWhatsapp className="text-3xl" />
       </a>
+
+      {/* ✅ Chatbot Toggle (middle me) */}
+      <div className="w-16 h-16">
+        <ChatbotToggle />
+      </div>
+
+ 
     </div>
   );
 };
