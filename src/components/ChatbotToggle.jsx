@@ -48,7 +48,7 @@ if (msg.includes("hi") || msg.includes("hello")) {
 } else if (msg.includes("services")) {
     reply = "We offer educational content, live tutorials, project guidance, and community support for learners.";
 } else if (msg.includes("contact")) {
-    reply = "You can reach us at info@growwithus.com or via WhatsApp at +91-9369535853.";
+    reply = "You can reach us at care@wowpio.com or via WhatsApp at +91-9369535853";
 } else if (msg.includes("help")) {
     reply = "I can help you with information about WowPio, our services, or general queries. Ask me anything!";
 } else {
